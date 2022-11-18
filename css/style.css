@@ -1,16 +1,32 @@
 /* General */
 * {
+    box-sizing: content-box;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    min-height: 75vh;
     margin: 20px 50px;
-    background-color: antiquewhite;
-    overflow: hidden;
+    background-color: white;
+    /* background-color: antiquewhite; */
+    overflow: unset;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card {
+    padding: 10px 20px;
+    background-color: #e6e6e6;
 }
 
 /* Navigation Bar */
@@ -24,7 +40,6 @@ nav {
 
 nav ul li {
     display: inline-block;
-    list-style: none;
     margin: 10px 15px;
 }
 
@@ -36,6 +51,11 @@ nav ul li a {
 
 .logo {
     width: 140px;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .btn-login {
@@ -68,13 +88,154 @@ nav ul li a {
     padding: 14px;
 }
 
+
+/* Side Navigation */
+.card-category {
+    width: 20%;
+    height: fit-content;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.ul-category li a {
+    display: flex;
+    background-color: white;
+    margin: 15px 0;
+    padding: 12px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.ul-category li a:hover{
+    color: #333;
+    background-color: #ffcf46;
+}
+
+.ul-category li .btn-category-active {
+    color: #333;
+    background-color: #ffcf46;
+}
+
+.ul-category li .btn-category-active:hover {
+    color: #333;
+    background-color: white;
+}
+
+.card-title {
+    color: #333;
+}
+
+/* Konten */
+#id-animal {
+    background-color: #0c86bc;
+    width: 50%;
+}
+
+.prev,
+.next {
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+}
+
+/* Nanti diganti ke general */
+.btn {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffcf46;
+}
+
+/* Grid */
+.btn-answers {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn.correct{
+    background-color: green;
+}
+
+.btn.wrong {
+    color: white;
+    background-color: red;
+}
+
+.title {
+    text-align: center;
+}
+
+.card-content {
+    height: 2000px;
+    width: 80%;
+    align-items: flex-end;
+    background-color: #0c86bc;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Fakta Unik Negara */
+#id-fakta-unik {
+    display: flex;
+}
+.container-fakta-unik {
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 80%;
+    padding: 10px 20px;
+    background-color: #e6e6e6;
+    border-radius: 10px;
+}
+
+.container-fakta-unik h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#generate {
+    margin-top: 20px;
+    margin-left: 44%;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 5px 10px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#generate:hover {
+    background-color: #ffcf46;
+}
+#fakta-unik {
+    text-align: center;
+    font-size: 18px;
+}
+
 /* Footer */
 footer {
-    width: 100%;
-    bottom: 0;
+    width: auto;
+    bottom: 0px;
     padding: 10px;
     color: white;
     background-color: #0c86bc;
-    position: fixed;
+    overflow-x: hidden;
+    position: relative;
     text-align: center;
 }
